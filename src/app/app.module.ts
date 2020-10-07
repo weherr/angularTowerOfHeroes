@@ -10,6 +10,9 @@ import { MessagesComponent } from './messages/messages.component';
 
 import { FormsModule } from '@angular/forms';
 
+//adding early to try and get sports data
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

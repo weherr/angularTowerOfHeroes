@@ -4,6 +4,7 @@ import { Hero } from '../hero';
 import { HeroService } from '../hero.service'
 import { MessageService } from '../message.service';
 
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -16,6 +17,8 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
   	//call the getHeroes function
   	this.getHeroes();
+
+  	this.test();
   }
 
   //the starting selected hero is blank of type Hero
@@ -44,7 +47,14 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes() : void{
-  	this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+  	this.heroService.getHeroes().subscribe(heroes => {this.heroes = heroes});
+  }
+
+
+  test() : void{
+  	this.heroService.test().subscribe(res => {
+         console.log(res);
+    });
   }
 
 
