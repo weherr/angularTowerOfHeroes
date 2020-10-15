@@ -9,10 +9,8 @@ import { map, catchError } from 'rxjs/operators';
 
 
 
-
 //adding early to try and get sports data
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-
 
 
 
@@ -34,7 +32,6 @@ export class HeroService {
   log(message : string) : void{
   	this.messageService.add('HeroService : ' + message);
   }
-
 
 
   options: {
